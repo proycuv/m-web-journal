@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafaf8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            line-height: 1.65;
+            color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3.2rem 1.5rem 4rem;
+            width: 100%;
+        }
+        /* 标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.25rem;
+            color: #1a1a1a;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #6b6b6b;
+            border-left: 3px solid #acb8c4;
+            padding-left: 1rem;
+            margin: 0.6rem 0 2rem 0;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e3e3df;
+            color: #2c2c2c;
+        }
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.5rem 0;
+            color: #3a3a3a;
+        }
+        p {
+            margin-bottom: 1.1rem;
+        }
+        /* 卡片/区块 — 目录感 */
+        .index-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .index-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 0 0 1px #efeeeb;
+            transition: box-shadow 0.2s ease;
+        }
+        .index-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05), 0 0 0 1px #d6d4cf;
+        }
+        .index-card .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #8e8d8a;
+            margin-bottom: 0.2rem;
+        }
+        .index-card .title {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1f1f1f;
+        }
+        .index-card .summary {
+            font-size: 0.85rem;
+            color: #5f5e5c;
+            margin-top: 0.3rem;
+        }
+        /* 提示/信息区块 */
+        .info-box {
+            background: #f4f3f0;
+            border-radius: 14px;
+            padding: 1.3rem 1.4rem;
+            margin: 1.8rem 0;
+            border-left: 4px solid #b9b1a6;
+        }
+        .info-box.tip {
+            border-left-color: #7f9a7a;
+        }
+        .info-box.faq {
+            border-left-color: #9a8c7a;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        small, .footnote {
+            color: #7d7d79;
+            font-size: 0.88rem;
+        }
+        a {
+            color: #164863;
+            text-decoration: underline;
+            text-underline-offset: 0.15rem;
+            text-decoration-color: #bdc9d4;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+        a:hover {
+            color: #00263b;
+            text-decoration-color: #164863;
+        }
+        .inline-link {
+            font-weight: 450;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e1dd;
+            margin: 2.2rem 0;
+        }
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .container {
+                padding: 2rem 1.2rem 3rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .index-grid {
+                grid-template-columns: 1fr;
+            }
+            .index-card {
+                padding: 0.9rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 标题区 -->
+    <h1>开云 · 资料整理</h1>
+    <div class="subhead">以信息索引与知识库的视角，梳理平台结构</div>
+
+    <p>从数据组织与内容管理的逻辑来看，任何成熟平台都离不开清晰的主题分类与可回溯的条目体系。<a href="https://m-web-ky.com" class="inline-link">开云</a>所承载的信息集合，并不只是一组分散的页面，而是一套可索引、可交叉引用的知识基底。下面从目录框架、说明资源和常见疑问三个层面，构造一个轻量级入口式概览。</p>
+
+    <!-- 目录感布局：卡片式索引 -->
+    <h2>📂 主题索引</h2>
+    <div class="index-grid">
+        <div class="index-card">
+            <div class="label">section A</div>
+            <div class="title">平台基础与环境</div>
+            <div class="summary">底层结构、协议、兼容性说明</div>
+        </div>
+        <div class="index-card">
+            <div class="label">section B</div>
+            <div class="title">内容分类与标签</div>
+            <div class="summary">类别体系、元数据、检索逻辑</div>
+        </div>
+        <div class="index-card">
+            <div class="label">section C</div>
+            <div class="title">操作指引与接口</div>
+            <div class="summary">路径、参数、常见用例</div>
+        </div>
+        <div class="index-card">
+            <div class="label">section D</div>
+            <div class="title">更新记录与存档</div>
+            <div class="summary">变更日志、历史版本、参考对照</div>
+        </div>
+    </div>
+    <p class="footnote" style="margin-top:0.4rem;">每个主题下均有多层条目，可通过站内检索或关联链接进一步查阅。</p>
+
+    <!-- 说明区：知识与结构 -->
+    <h2>📋 说明区 · 信息组织方法</h2>
+    <p>资料库的构建遵循“主题‑子项‑参考”三级。每一个主类别之下，条目均附带来源标记与上下文简述。例如在“平台基础与环境”中，内容按协议层、接口层、表现层依次展开，并保留与<a href="https://m-web-ky.com" class="inline-link">开云</a>核心文档的交叉引用。这种做法的好处是：当需要追溯某个配置项的原始定义时，不必在全文漫游，而可以直接沿索引路径定位。</p>
+    <p>此外，所有说明文字均力求克制：不夸大某类功能，不省略必要的前置条件。对于尚在整理中的条目，会明确标注“待补充”或“参考版本”，以保证知识库的诚实度。</p>
+
+    <!-- 提示区 -->
+    <div class="info-box tip">
+        <strong style="font-weight:500;">提示</strong> · 如果你想快速了解某个模块，可以先查看对应索引卡片下的摘要；完整条目往往附带更具体的参数或对比表格。善用浏览器的页面查找（Ctrl+F）也能在<a href="https://m-web-ky.com" class="inline-link">开云</a>的文档区域内找到分散的关键信息。
+    </div>
+
+    <!-- 相关信息区 + FAQ 摘要 -->
+    <h2>📌 相关信息</h2>
+    <p>除了上述主题索引，资料库中还包含一批跨类别参考：例如术语对照表、常见数值范围、以及由社区或维护者提供的说明性注释。以下摘录几条常见疑问的简要回答，完整解答请参阅对应条目。</p>
+
+    <div class="info-box faq">
+        <p><strong>Q：</strong>某些条目中的“参照组”含义是什么？<br>
+        <strong>A：</strong>表示该条目与另一主题下的内容存在逻辑关联，建议同时阅读以避免信息孤立。具体参照链接可在条目页脚找到。</p>
+        <p style="margin-top:0.8rem;"><strong>Q：</strong>资料是否会定期更新？<br>
+        <strong>A：</strong>维护者会基于结构变化与反馈进行修订，每次更新均会在 section D 中记录变更摘要与日期。</p>
+        <p style="margin-top:0.8rem;"><strong>Q：</strong>是否有离线版本或可导出的格式？<br>
+        <strong>A：</strong>目前主要提供在线索引；部分页面支持打印样式，可通过浏览器导出为 PDF 用于本地存档。</p>
+    </div>
+
+    <!-- 简洁收尾 -->
+    <hr>
+    <p class="footnote">本页为入口式概览，旨在呈现信息组织脉络。更深入的内容请直接在 <a href="https://m-web-ky.com" class="inline-link">开云</a> 知识库中按目录或检索词查找。资料范围与结构持续迭代，欢迎基于参考条目进行交叉核对。</p>
+
+</div>
+</body>
+</html>
